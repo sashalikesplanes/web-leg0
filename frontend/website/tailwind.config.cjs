@@ -6,7 +6,7 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: { }
 	},
 
 	plugins: [forms, typography, daisyui]
