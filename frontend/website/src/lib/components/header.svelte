@@ -4,7 +4,7 @@
 			<label tabindex="0" class="btn btn-ghost lg:hidden">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5 stroke-accent"
+					class="h-5 w-5 stroke-primary-content"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
@@ -20,21 +20,27 @@
 				tabindex="0"
 				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
 			>
-				<li><a class="text-accent link link-hover" href="/blog">Blog</a></li>
-				<li tabindex="0"><a class="text-accent link link-hover" href="/about">About</a></li>
-				<li><a class="text-accent link link-hover" href="/contact">Contact</a></li>
+				<li><a class="text-primary-content link link-hover" href="/blog">Blog</a></li>
+				<li tabindex="0">
+					<a class="text-primary-content link link-hover" href="/about">About</a>
+				</li>
+				<li><a class="text-primary-content link link-hover" href="/contact">Contact</a></li>
 			</ul>
 		</div>
 		<a href="/" class="btn btn-ghost normal-case text-xl">🚀 Alexander Kiselev</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal p-0">
-			<li><a href="/blog" class="text-accent link link-hover">Blog</a></li>
-			<li><a href="/about" class="text-accent link link-hover">About</a></li>
-			<li><a href="/contact" class="text-accent link link-hover">Contact</a></li>
+			<li><a href="/blog" class="text-primary-content link link-hover">Blog</a></li>
+			<li><a href="/about" class="text-primary-content link link-hover">About</a></li>
+			<li><a href="/contact" class="text-primary-content link link-hover">Contact</a></li>
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a href="/"><h1 class="text-2xl font-bold">WebLeg0</h1></a>
+		<ul class="menu menu-horizontal p-0">
+			<li>
+				<a href="/"><h1 class="text-2xl font-bold">WebLeg0</h1></a>
+			</li>
+		</ul>
 	</div>
 </div>

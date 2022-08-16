@@ -4,11 +4,8 @@
 	import Footer from '$lib/components/footer.svelte';
 </script>
 
-
-<div class="max-w-[850px] m-auto w-[97.5%]">
-<Header />
-<slot />
-<div class="divider"></div>
-<Footer />
+<div class="max-w-[850px] h-full flex flex-col m-auto w-[97.5%]">
+	<Header />
+	<slot />
+	<Footer />
 </div>
-
