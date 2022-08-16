@@ -2,11 +2,13 @@
 	import Icon from '$lib/components/icon.svelte';
 </script>
 
-<div class="divider" />
 <h1>
 	Hello Web! I am Alexander Kiselev, a builder of the better future.
 </h1>
-<p >
+<div class="mockup-code">
+  <pre data-prefix="$"><code>Bringing order to chaos one brick at a time...</code></pre>
+</div>
+<p>
 	A fullstack software engineer striving to build the better tomorrow. Currently looking for work.
 	This blog is a documentation of my journey into web development.
 </p>
@@ -50,4 +52,3 @@
 		</div>
 	</div>
 </div>
-<div class="divider" />
