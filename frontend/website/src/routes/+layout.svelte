@@ -6,6 +6,8 @@
 
 <div class="max-w-[850px] h-full flex flex-col m-auto w-[97.5%]">
 	<Header />
-	<slot />
+	<main class="flex flex-col gap-4">
+		<slot />
+	</main>
 	<Footer />
 </div>

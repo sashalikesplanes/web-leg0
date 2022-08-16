@@ -27,7 +27,7 @@
 				<li><a class="text-primary-content link link-hover" href="/contact">Contact</a></li>
 			</ul>
 		</div>
-		<a href="/" class="btn btn-ghost normal-case text-xl">🚀 Alexander Kiselev</a>
+		<a href="/" class="btn btn-ghost normal-case"><h2>🚀 A. Kiselev</h2></a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal p-0">
@@ -39,7 +39,7 @@
 	<div class="navbar-end">
 		<ul class="menu menu-horizontal p-0">
 			<li>
-				<a href="/"><h1 class="text-2xl font-bold">WebLeg0</h1></a>
+				<a href="/"><h2>WebLeg0</h2></a>
 			</li>
 		</ul>
 	</div>
