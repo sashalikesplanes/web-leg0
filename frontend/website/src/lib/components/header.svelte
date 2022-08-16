@@ -20,18 +20,18 @@
 				tabindex="0"
 				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
 			>
-				<li><a class="text-accent" href="/blog">Blog</a></li>
-				<li tabindex="0"><a class="text-accent" href="/about">About</a></li>
-				<li><a class="text-accent" href="/contact">Contact</a></li>
+				<li><a class="text-accent link link-hover" href="/blog">Blog</a></li>
+				<li tabindex="0"><a class="text-accent link link-hover" href="/about">About</a></li>
+				<li><a class="text-accent link link-hover" href="/contact">Contact</a></li>
 			</ul>
 		</div>
 		<a href="/" class="btn btn-ghost normal-case text-xl">🚀 Alexander Kiselev</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal p-0">
-			<li><a href="/blog" class="text-accent">Blog</a></li>
-			<li><a href="/about" class="text-accent">About</a></li>
-			<li><a href="/contact" class="text-accent">Contact</a></li>
+			<li><a href="/blog" class="text-accent link link-hover">Blog</a></li>
+			<li><a href="/about" class="text-accent link link-hover">About</a></li>
+			<li><a href="/contact" class="text-accent link link-hover">Contact</a></li>
 		</ul>
 	</div>
 	<div class="navbar-end">

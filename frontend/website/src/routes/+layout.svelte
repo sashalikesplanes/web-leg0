@@ -1,10 +1,14 @@
 <script>
 	import '../app.postcss';
 	import Header from '$lib/components/header.svelte';
+	import Footer from '$lib/components/footer.svelte';
 </script>
 
-<Header />
 
-<main class="max-w-[850px] m-auto w-[97.5%]">
+<div class="max-w-[850px] m-auto w-[97.5%]">
+<Header />
 <slot />
-</main>
+<div class="divider"></div>
+<Footer />
+</div>
+
