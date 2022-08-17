@@ -19,14 +19,17 @@ app.get('/posts', async (req, res) => {
     const error = e as Error;
     res.status(503).send(error.message);
   }
-})
+});
 
 app.get('/posts/:urlTitle', async (req, res) => {
-  // const post = await api.getPostByTitle(req.params.urlTitle);
-  if (true) res.status(404).end('Post not found');
-  // convert to HTML and send
-})
+  try {
+    const post = await api.getPostByTitle(req.params.urlTitle);
+    if (!post) res.status(404).end('Post not found');
+    res.json(post);
+  } catch(e) {
+    const error = e as Error;
+    res.status(404).send(error.message);
+  }
+});
 
-// API Endpoint code
-//
 export default app;

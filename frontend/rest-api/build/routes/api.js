@@ -12,7 +12,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const showdown_1 = __importDefault(require("showdown"));
 const db_1 = __importDefault(require("../utils/db"));
+const markdownConverter = new showdown_1.default.Converter();
 const getPosts = (tag, limit) => __awaiter(void 0, void 0, void 0, function* () {
     let query = db_1.default
         .from('posts')
@@ -25,10 +27,19 @@ const getPosts = (tag, limit) => __awaiter(void 0, void 0, void 0, function* () 
     const { data, error } = yield query.order('date-timestamp', { ascending: false });
     if (error)
         throw new Error('error fetching posts from supabase');
-    console.log(data);
     return data;
+});
+const getPostByTitle = (title) => __awaiter(void 0, void 0, void 0, function* () {
+    const { data: post, error } = yield db_1.default.from('posts').select('*').eq('url-title', title).single();
+    if (error)
+        throw new Error(error.message);
+    if (!post)
+        throw new Error('Post not found');
+    post["html-content"] = markdownConverter.makeHtml(post["markdown-content"]);
+    return post;
 });
 const api = {
     getPosts,
+    getPostByTitle,
 };
 exports.default = api;

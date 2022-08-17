@@ -1,4 +1,7 @@
+import showdown from 'showdown';
 import supabase from '../utils/db';
+
+const markdownConverter = new showdown.Converter();
 
 const getPosts = async (tag?: string, limit?: number) => {
   let query = supabase
@@ -12,11 +15,22 @@ const getPosts = async (tag?: string, limit?: number) => {
   const { data, error } = await query.order('date-timestamp', { ascending: false });
 
   if (error) throw new Error('error fetching posts from supabase');
-  console.log(data);
   return data;
 }
+
+const getPostByTitle = async(title: string) => {
+  const { data: post, error } = await supabase.from('posts').select('*').eq('url-title', title).single();
+
+  if (error) throw new Error(error.message);
+  if (!post) throw new Error('Post not found');
+
+  post["html-content"] = markdownConverter.makeHtml(post["markdown-content"]);
+  return post;
+}
+
 const api = {
   getPosts,
+  getPostByTitle,
 }
 
 export default api;

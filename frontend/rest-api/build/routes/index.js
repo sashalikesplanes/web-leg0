@@ -32,11 +32,15 @@ app.get('/posts', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
 }));
 app.get('/posts/:urlTitle', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // const post = await api.getPostByTitle(req.params.urlTitle);
-    if (true)
-        res.status(404).end('Post not found');
-    // convert to HTML and send
+    try {
+        const post = yield api_1.default.getPostByTitle(req.params.urlTitle);
+        if (!post)
+            res.status(404).end('Post not found');
+        res.json(post);
+    }
+    catch (e) {
+        const error = e;
+        res.status(404).send(error.message);
+    }
 }));
-// API Endpoint code
-//
 exports.default = app;
