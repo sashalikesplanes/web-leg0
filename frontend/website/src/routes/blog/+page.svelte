@@ -2,6 +2,14 @@
 	import Icon from '$lib/components/icon.svelte';
 </script>
 
+<svelte:head>
+	<title>Blog Posts | WebLeg0</title>
+	<meta
+		name="description"
+		content="All the blog posts which have been published by Alexander Kiselev on WebLeg0"
+	/>
+</svelte:head>
+
 <h1>Blog Posts</h1>
 <div class="card w-full bg-base-200 hover:bg-base-300 shadow-xl">
 	<a href="/blog" class="card-body flex-row flex-wrap">

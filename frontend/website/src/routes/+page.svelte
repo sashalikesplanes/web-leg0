@@ -2,6 +2,11 @@
 	import Icon from '$lib/components/icon.svelte';
 </script>
 
+<svelte:head>
+  <title>WebLeg0</title>
+  <meta name="description" content="A blog about all things software engineering by Alexander Kiselev"/>
+</svelte:head>
+
 <h1>
 	Hello Web! I am Alexander Kiselev, a builder of the better future.
 </h1>

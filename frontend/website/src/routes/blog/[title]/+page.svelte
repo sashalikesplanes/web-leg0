@@ -7,11 +7,13 @@
 	import highlightTheme from 'svelte-highlight/styles/a11y-dark';
 
 	export let data: PageData;
-
 </script>
 
 <svelte:head>
-  {@html highlightTheme}
+	<title>{data.title} | WebLeg0</title>
+	<!-- TODO -->
+	<meta name="description" content="TODO" />
+	{@html highlightTheme}
 </svelte:head>
 
 <article class="vflex">
@@ -30,26 +32,34 @@
 		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
 		the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
 		of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-		but also the leap into electronic <a href="https://google.com">Google</a> typesetting, remaining essentially unchanged. It was
-		popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-		and more recently with desktop publishing software like Aldus PageMaker including versions of
-		Lorem Ipsum.
+		but also the leap into electronic <a href="https://google.com">Google</a> typesetting, remaining
+		essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+		Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+		versions of Lorem Ipsum.
 	</p>
-	<Highlight language={html} code={`<div>
+	<Highlight
+		language={html}
+		code={`<div>
   <p>Html code example</p>
-</div>`}/>
-  <Highlight language={typescript} code={`function hello() {
-  console.log('world'); `}/>
-  <Highlight language={bash} code={`echo "hello world"`}/>
-  <ol>
-    <li>One</li>
-    <li>with link <a href="https://google.com">Google</a></li>
-  </ol>
-    <ul>
-    <li>test</li>
-    <li>with code <code>snippet</code></li>
-  </ul>
+</div>`}
+	/>
+	<Highlight
+		language={typescript}
+		code={`function hello() {
+  console.log('world'); `}
+	/>
+	<Highlight language={bash} code={`echo "hello world"`} />
+	<ol>
+		<li>One</li>
+		<li>with link <a href="https://google.com">Google</a></li>
+	</ol>
+	<ul>
+		<li>test</li>
+		<li>with code <code>snippet</code></li>
+	</ul>
 
-  <img src="https://assets.coderrocketfuel.com/css-article-image.png" />
-  <blockquote class="alert alert-warning shadow-lg">Warning or a special message which we wish to stand out</blockquote>
+	<img src="https://assets.coderrocketfuel.com/css-article-image.png" />
+	<blockquote class="alert alert-warning shadow-lg">
+		Warning or a special message which we wish to stand out
+	</blockquote>
 </article>
