@@ -22,8 +22,14 @@ app.get('/posts', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(422).send('malformed query for tag');
         return;
     }
-    const posts = yield api_1.default.getPosts(tag, limit);
-    res.json(posts);
+    try {
+        const posts = yield api_1.default.getPosts(tag, limit);
+        res.json(posts);
+    }
+    catch (e) {
+        const error = e;
+        res.status(503).send(error.message);
+    }
 }));
 app.get('/posts/:urlTitle', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // const post = await api.getPostByTitle(req.params.urlTitle);

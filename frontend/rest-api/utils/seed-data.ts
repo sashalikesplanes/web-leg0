@@ -1,7 +1,7 @@
 import supabaseClient from "./db";
 
 const data = [
-  {
+  /* {
     "tags": ["react", "javascript"],
     "title": "How to Create a Website with Next.js & React",
     "url-title": "how-to-create-a-website-with-next-js-and-react",
@@ -46,6 +46,16 @@ const data = [
     "title": "Introduction to Git - Background, Installation, and Usage",
     "url-title": "introduction-to-git-version-control-system",
     "date-timestamp": new Date('2022-04-20').toISOString(),
+    "thumbnail-image-url": "https://assets.coderrocketfuel.com/coding-blog-git-thumbnail.png",
+    "markdown-content": "# Blog Post Content",
+    "seo-title-tag": "Introduction to Git - Background, Installation, and Usage | Coding Blog",
+    "seo-meta-description": "Introduction to Git version control software. Learn about the background and get a guide on installing and using Git."
+  } */
+  {
+    "tags": ["git"],
+    "title": "Introduction to Git - Background, Installation, and Usage",
+    "url-title": "introduction-to-git2-version-control-system",
+    "date-timestamp": new Date('2023-04-20').toISOString(),
     "thumbnail-image-url": "https://assets.coderrocketfuel.com/coding-blog-git-thumbnail.png",
     "markdown-content": "# Blog Post Content",
     "seo-title-tag": "Introduction to Git - Background, Installation, and Usage | Coding Blog",

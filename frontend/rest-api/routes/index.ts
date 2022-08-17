@@ -12,8 +12,13 @@ app.get('/posts', async (req, res) => {
     return;
   }
 
-  const posts = await api.getPosts(tag, limit);
-  res.json(posts);
+  try {
+    const posts = await api.getPosts(tag, limit);
+    res.json(posts);
+  } catch (e) {
+    const error = e as Error;
+    res.status(503).send(error.message);
+  }
 })
 
 app.get('/posts/:urlTitle', async (req, res) => {
