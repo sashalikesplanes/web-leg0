@@ -18,24 +18,24 @@ const markdownConverter = new showdown_1.default.Converter();
 const getPosts = (tag, limit) => __awaiter(void 0, void 0, void 0, function* () {
     let query = db_1.default
         .from('posts')
-        .select('title, url-title, date-timestamp, tags, thumbnail-image-url')
-        .lte('date-timestamp', new Date().toISOString()); // make sure future articles arent sent
+        .select('title, url_title, date_timestamp, thumbnail_image_url')
+        .lte('date_timestamp', new Date().toISOString()); // make sure future articles arent sent
     if (tag)
         query = query.contains('tags', [tag]);
     if (limit && !Number.isNaN(limit))
         query = query.range(0, limit - 1);
-    const { data, error } = yield query.order('date-timestamp', { ascending: false });
+    const { data, error } = yield query.order('date_timestamp', { ascending: false });
     if (error)
-        throw new Error('error fetching posts from supabase');
+        throw new Error('error fetching posts from supabase ' + error.message);
     return data;
 });
 const getPostByTitle = (title) => __awaiter(void 0, void 0, void 0, function* () {
-    const { data: post, error } = yield db_1.default.from('posts').select('*').eq('url-title', title).single();
+    const { data: post, error } = yield db_1.default.from('posts').select('*').eq('url_title', title).single();
     if (error)
         throw new Error(error.message);
     if (!post)
         throw new Error('Post not found');
-    post["html-content"] = markdownConverter.makeHtml(post["markdown-content"]);
+    post["html_content"] = markdownConverter.makeHtml(post["markdown_content"]);
     return post;
 });
 const api = {
