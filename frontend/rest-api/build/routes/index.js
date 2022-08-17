@@ -15,10 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const api_1 = __importDefault(require("./api"));
 const app = express_1.default.Router();
-// all posts, 5 posts, by tag
-// by default return all posts, limit can be requested, tag(s) can be specified
 app.get('/posts', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // takes tags and limit
     const tag = req.query.tag;
     const limit = Number(req.query.limit);
     if ((typeof tag !== 'string') && (typeof tag !== 'undefined')) {

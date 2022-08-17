@@ -3,10 +3,7 @@ import api from './api';
 
 const app = express.Router();
 
-// all posts, 5 posts, by tag
-// by default return all posts, limit can be requested, tag(s) can be specified
 app.get('/posts', async (req, res) => {
-  // takes tags and limit
   const tag = req.query.tag;
   const limit = Number(req.query.limit);
 
