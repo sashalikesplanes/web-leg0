@@ -1,5 +1,9 @@
-<script>
-	import Icon from '$lib/components/icon.svelte';
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { getPosts } from '$lib/api';
+	import { error } from '@sveltejs/kit';
+	import PostPreview from '$lib/components/post-preview.svelte';
+
 </script>
 
 <svelte:head>
@@ -19,12 +23,7 @@
 </p>
 <div class="divider" />
 <h2>Latest Posts</h2>
-<div class="card w-full bg-base-200 hover:bg-base-100 shadow-xl">
-	<a href="/blog" class="card-body flex-row">
-		<Icon iconType="webrtc" classCss="h-8 w-8 md:h-16 md:w-16 " />
-		<span class="ml-4 flex-shrink card-title "><h3>WebRTC Chat server with WebSockets</h3> </span>
-	</a>
-</div>
+<PostPreview limit={5} />
 <div class="divider" />
 <h2>My Projects</h2>
 <div class="card w-full bg-base-200 hover:bg-base-100 shadow-xl">
