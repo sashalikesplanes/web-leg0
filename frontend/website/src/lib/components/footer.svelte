@@ -1,4 +1,4 @@
-<footer class="footer footer-center mx-auto gap-4 bg-base-100 text-base-content rounded">
+<footer class="footer footer-center mx-auto gap-4 bg-base-300 text-base-content rounded">
 		<ul class="menu menu-horizontal p-0">
 			<li><a href="/blog" class="text-primary-content link link-hover">Blog</a></li>
 			<li><a href="/about" class="text-primary-content link link-hover">About</a></li>

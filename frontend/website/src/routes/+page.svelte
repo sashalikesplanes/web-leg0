@@ -19,7 +19,7 @@
 </p>
 <div class="divider" />
 <h2>Latest Posts</h2>
-<div class="card w-full bg-base-200 hover:bg-base-300 shadow-xl">
+<div class="card w-full bg-base-200 hover:bg-base-100 shadow-xl">
 	<a href="/blog" class="card-body flex-row">
 		<Icon iconType="webrtc" classCss="h-8 w-8 md:h-16 md:w-16 " />
 		<span class="ml-4 flex-shrink card-title "><h3>WebRTC Chat server with WebSockets</h3> </span>
@@ -27,7 +27,7 @@
 </div>
 <div class="divider" />
 <h2>My Projects</h2>
-<div class="card w-full bg-base-200 shadow-xl">
+<div class="card w-full bg-base-200 hover:bg-base-100 shadow-xl">
 	<div class="card-body">
 		<h3 class="card-title">CudiZone</h3>
 		<p>
@@ -44,7 +44,7 @@
 		</div>
 	</div>
 </div>
-<div class="card w-full bg-base-200 shadow-xl">
+<div class="card w-full bg-base-200 hover:bg-base-100 shadow-xl">
 	<div class="card-body">
 		<h3 class="card-title">Preliminary Aircraft Design</h3>
 		<p>
