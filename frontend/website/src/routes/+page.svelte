@@ -1,21 +1,18 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { getPosts } from '$lib/api';
-	import { error } from '@sveltejs/kit';
 	import PostPreview from '$lib/components/post-preview.svelte';
-
 </script>
 
 <svelte:head>
-  <title>WebLeg0</title>
-  <meta name="description" content="A blog about all things software engineering by Alexander Kiselev"/>
+	<title>WebLeg0</title>
+	<meta
+		name="description"
+		content="A blog about all things software engineering by Alexander Kiselev"
+	/>
 </svelte:head>
 
-<h1>
-	Hello Web! I am Alexander Kiselev, a builder of the better future.
-</h1>
+<h1>Hello Web! I am Alexander Kiselev, a builder of the better future.</h1>
 <div class="mockup-code">
-  <pre data-prefix="$"><code>Bringing order to chaos one brick at a time...</code></pre>
+	<pre data-prefix="$"><span>Bringing order to chaos one brick at a time...</span></pre>
 </div>
 <p>
 	A fullstack software engineer striving to build the better tomorrow. Currently looking for work.
