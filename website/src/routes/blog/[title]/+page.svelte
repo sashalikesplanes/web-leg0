@@ -13,10 +13,14 @@
 </script>
 
 <svelte:head>
-	<title>{data.title} | WebLeg0</title>
-	<!-- TODO -->
 	<meta name="description" content="TODO" />
 	{@html highlightTheme}
+  {#await postPromise}
+    <title>WebLeg0</title>
+  {:then post}
+    <title>{post.title} | WebLeg0</title>
+  {/await}
+	<!-- TODO -->
 </svelte:head>
 
 {#await postPromise}
