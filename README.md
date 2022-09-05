@@ -7,6 +7,4 @@ Tools used:
 - Svelte
 - SvelteKit
 - Express
-- WebTorrent
-- WebRTC
 - Supabase (PostgreSQL host)
