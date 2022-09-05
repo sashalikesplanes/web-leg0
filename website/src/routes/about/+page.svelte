@@ -45,4 +45,4 @@ technical mentoring</li>
 <div class="divider"></div>
 <Projects/>
 <div class="divider"></div>
-<a class="text-accent text-center underline" href="./cv.pdf"><h2>Latest CV</h2></a>
+<a class="text-accent text-center underline" href="./CV_Alexander_Kiselev.pdf"><h2>Latest CV</h2></a>

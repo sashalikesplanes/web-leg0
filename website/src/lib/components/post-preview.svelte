@@ -28,7 +28,7 @@
 			</a>
 		</div>
 	{:else}
-		<p>No posts found</p>
+		<p>No posts yet...</p>
 	{/each}
 {:catch e}
 	<p>{e.message}</p>
