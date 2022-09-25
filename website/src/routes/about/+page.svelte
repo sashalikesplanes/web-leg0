@@ -41,8 +41,6 @@ technical mentoring</li>
   <li><h3 class="inline-block">Freelance web developer / domain management, Futoripinativo, Portugal (02/22 - 07/22)</h3>
 </ul>
 <div class="divider"></div>
-<h2>Notable Achievements</h2>
-<div class="divider"></div>
 <Projects/>
 <div class="divider"></div>
 <a class="text-accent text-center underline" href="./CV_Alexander_Kiselev.pdf"><h2>Latest CV</h2></a>
