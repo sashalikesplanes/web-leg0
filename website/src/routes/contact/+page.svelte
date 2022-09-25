@@ -1,6 +1,5 @@
 <script>
   import AboutMe from "../about-me.svelte";
-  import Projects from "../projects.svelte";
 </script>
 <svelte:head>
 	<title>Contact | WebLeg0</title>
@@ -19,6 +18,13 @@
 		<h4 class="inline-block">
 			Email: <a class="text-accent hover:underline" href="mailto:sdkiselev1812@gmail.com"
 				>sdkiselev1812@gmail.com</a
+			>
+		</h4>
+	</li>
+	<li>
+		<h4 class="inline-block">
+			Phone: <a class="text-accent hover:underline" href="tel:+352691208543"
+				>+352691208543</a
 			>
 		</h4>
 	</li>
